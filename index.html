@@ -1,11 +1,32 @@
 <!DOCTYPE HTML>
-<HTML>
-  <HEAD>
-    <TITLE>Best Buying Link - Across the internet 🌐✅</TITLE>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  </HEAD>
-  <body>
-    <h1>&nbsp; Best Buying Link</h1>
+<html>
+<head>
+  <title>Best Buying Link - Across the internet 🌐✅</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <h1 id="deviceInfo">&nbsp; Best Buying Link</h1>
 
-  </body>
-</HTML>
+  <script>
+    // Retrieve the device information
+    var deviceInfo = {
+      userAgent: navigator.userAgent,
+      screenWidth: window.screen.width,
+      screenHeight: window.screen.height,
+      colorDepth: window.screen.colorDepth,
+      browser: {
+        name: navigator.appName,
+        version: navigator.appVersion,
+        cookiesEnabled: navigator.cookieEnabled,
+        language: navigator.language
+      }
+    };
+
+    // Convert deviceInfo to a JSON string
+    var deviceInfoString = JSON.stringify(deviceInfo);
+
+    // Set the device information as the content of the h1 tag
+    document.getElementById('deviceInfo').innerText = deviceInfoString;
+  </script>
+</body>
+</html>
